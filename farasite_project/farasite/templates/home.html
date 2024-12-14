@@ -1,32 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farasite</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to Farasite!</h1>
-        <p>Your Django app is up and running!</p>
+{% extends "base.html" %}
+
+{% block title %}Home - FaraSite{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h2>Welcome to FaraSite</h2>
+    <p>Your trusted partner for building applications and websites.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Our Services</h3>
+                    <p class="card-text">We develop customized web and mobile applications tailored to your needs.</p>
+                    <a href="/services" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Technology News</h3>
+                    <p class="card-text">Stay updated with the latest trends and advancements in technology.</p>
+                    <a href="/news" class="btn btn-primary">Read News</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Contact Us</h3>
+                    <p class="card-text">Have questions? Get in touch with us for more information.</p>
+                    <a href="/contact" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+
+    <div class="mt-5">
+        <h3>Why Choose Us?</h3>
+        <p>At FaraSite, we prioritize innovation, quality, and customer satisfaction. Let us help you bring your ideas to life!</p>
+    </div>
+</div>
+{% endblock %}

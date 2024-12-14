@@ -1,0 +1,95 @@
+/* Typography and Color Scheme */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styling */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.site-header .navbar-brand {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.site-header .nav-link {
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.site-header .nav-link:hover {
+    color: #0056b3;
+}
+
+/* Main Content */
+main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.site-footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.site-footer p, .site-footer a {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+.site-footer .text-center a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+/* Utility Classes */
+.text-primary {
+    color: #007bff !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-header .nav {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
