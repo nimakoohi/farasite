@@ -1,45 +1,97 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Home - FaraSite{% endblock %}
 
 {% block content %}
-<div class="text-center">
-    <h2>Welcome to FaraSite</h2>
-    <p>Your trusted partner for building applications and websites.</p>
 
-    <div class="row mt-5">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">Our Services</h3>
-                    <p class="card-text">We develop customized web and mobile applications tailored to your needs.</p>
-                    <a href="/services" class="btn btn-primary">Learn More</a>
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+<section class="hero-section text-center text-white d-flex align-items-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Empowering Your Digital Journey</h1>
+        <p class="lead mt-3">Building cutting-edge applications and websites tailored for your success.</p>
+        <a href="/services" class="btn btn-primary btn-lg mt-4 px-4">Explore Our Services</a>
+    </div>
+</section>
+
+<section class="features-section py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                    <h3 class="h5">Web Development</h3>
+                    <p>Responsive, scalable, and stunning websites for your business.</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">Technology News</h3>
-                    <p class="card-text">Stay updated with the latest trends and advancements in technology.</p>
-                    <a href="/news" class="btn btn-primary">Read News</a>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h3 class="h5">Mobile Applications</h3>
+                    <p>Custom apps to bring your ideas to life on iOS and Android.</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">Contact Us</h3>
-                    <p class="card-text">Have questions? Get in touch with us for more information.</p>
-                    <a href="/contact" class="btn btn-primary">Contact</a>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h3 class="h5">Digital Strategy</h3>
+                    <p>Data-driven strategies to maximize your online presence.</p>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="mt-5">
-        <h3>Why Choose Us?</h3>
-        <p>At FaraSite, we prioritize innovation, quality, and customer satisfaction. Let us help you bring your ideas to life!</p>
+<section class="info-section bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="{% static 'img/Farasite12.webp' %}" alt="FaraSite Team" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">Why Choose FaraSite?</h2>
+                <p class="mt-3">At FaraSite, we bring innovation, expertise, and dedication to every project. From concept to execution, we ensure top-notch quality that exceeds your expectations.</p>
+                <ul class="list-unstyled mt-4">
+                    <li><i class="fas fa-check-circle text-primary"></i> Cutting-edge technology solutions</li>
+                    <li><i class="fas fa-check-circle text-primary"></i> Customer-first approach</li>
+                    <li><i class="fas fa-check-circle text-primary"></i> Proven track record of success</li>
+                </ul>
+                <a href="/about" class="btn btn-primary mt-4">Learn More About Us</a>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
+<section class="cta-section text-center text-white py-5">
+    <div class="container">
+        <h2 class="fw-bold">Ready to Get Started?</h2>
+        <p class="mt-3">Let us help you achieve your goals with personalized solutions.</p>
+        <a href="/contact" class="btn btn-primary btn-lg mt-4 px-4">Contact Us Today</a>
+    </div>
+</section>
+
+<style>
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url("{% static 'img/hero-bg.jpg' %}") no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    .cta-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url("{% static 'img/cta-bg.jpg' %}") center center/cover no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+</style>
+
 {% endblock %}
