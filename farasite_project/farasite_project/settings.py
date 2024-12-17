@@ -1,5 +1,6 @@
 from pathlib import Path
 from dotenv import load_dotenv
+import logging
 import os
 
 dotenv_path = '/home/niromusic/farasite_config/.env'
@@ -58,12 +59,14 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",  # Correct order
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django_otp.middleware.OTPMiddleware",  # Place it after AuthenticationMiddleware
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "farasite.middleware.set_language.SetLanguageMiddleware",  # Correct path
 ]
 
 ROOT_URLCONF = 'farasite_project.urls'
@@ -134,11 +137,35 @@ USE_L10N = True
 USE_TZ = True
 
 # Specify the list of languages your site supports
+LANGUAGE_CODE = 'fa'  # Set Persian as default
 LANGUAGES = [
     ('fa', 'Persian'),
     ('en', 'English'),
 ]
 
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
+import logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        '': {  # root logger
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/

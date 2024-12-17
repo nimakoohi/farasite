@@ -1,84 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
 /* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url("../img/hero-bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .hero-section p {
     font-size: 1.2rem;
+    color: #eaeaea;
 }
 
 /* Features Section */
-.features-section {
-    background-color: #ffffff;
-}
-
-.feature-box {
-    padding: 20px;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
+.features-section .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-box:hover {
+.features-section .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.feature-box h3 {
+.features-section h5 {
+    margin-top: 1rem;
     font-weight: 600;
-    margin-top: 15px;
-}
-
-.feature-box p {
-    color: #666;
 }
 
 /* Info Section */
-.info-section {
-    background-color: #f9f9f9;
-}
-
-.info-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
+.info-section img {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .info-section ul {
-    margin-top: 20px;
     padding-left: 0;
+    margin-top: 1rem;
 }
 
 .info-section ul li {
-    font-size: 1rem;
-    margin-bottom: 10px;
     list-style: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .info-section ul li i {
-    margin-right: 10px;
     color: #007bff;
+    margin-right: 0.5rem;
 }
 
-.info-section .btn {
-    font-weight: 600;
+/* Testimonials Section */
+.testimonials-section .card {
+    border: 1px solid #f1f1f1;
+    padding: 1.5rem;
+}
+
+.testimonials-section img {
+    border: 2px solid #007bff;
 }
 
 /* Call-to-Action Section */
+.cta-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url("../img/cta-bg.jpg") center center/cover no-repeat;
+    text-align: center;
+    padding: 4rem 0;
+}
 
 .cta-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .cta-section p {
     font-size: 1.2rem;
-    margin-top: 15px;
-}
-
-.cta-section .btn {
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 10px 30px;
+    color: #eaeaea;
 }
