@@ -10,7 +10,6 @@ class SetLanguageMiddleware:
     def __call__(self, request):
         lang = request.GET.get('lang')
         if lang:
-            logger.debug(f"Switching to language: {lang}")
             translation.activate(lang)
             request.session['django_language'] = lang  # Use the new session key
         response = self.get_response(request)

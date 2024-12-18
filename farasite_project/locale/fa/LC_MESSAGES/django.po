@@ -77,15 +77,15 @@ msgstr "فرآسایت"
 
 #: .\farasite\templates\home.html:12
 msgid "Empowering Your Digital Journey"
-msgstr "توانمندسازی سفر دیجیتال شما"
+msgstr "همراه شما در مسیر دیجیتال"
 
 #: .\farasite\templates\home.html:13
 msgid "Building cutting-edge applications and websites tailored for your success."
-msgstr "ساخت وب‌سایت‌ها و برنامه‌های پیشرفته متناسب با موفقیت شما."
+msgstr "طراحی و ساخت برنامه‌ها و وب‌سایت‌های پیشرفته برای موفقیت شما."
 
 #: .\farasite\templates\home.html:14
 msgid "Explore Our Services"
-msgstr "خدمات ما را کشف کنید"
+msgstr "از خدمات ما دیدن کنید"
 
 #: .\farasite\templates\home.html:24
 msgid "Web Development"
