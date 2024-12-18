@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import logging
 import os
 
-dotenv_path = '/home/niromusic/farasite_config/.env'
+dotenv_path = '/home/niromusic/config/farasite_config/.env'
 
 load_dotenv(dotenv_path)
 
